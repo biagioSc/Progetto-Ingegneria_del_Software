@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/indietroImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_freccia"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dettaglioTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dettaglio Asta"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@+id/indietroImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tipo_astaTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Asta al ribasso"
+        android:textColor="#7F7F82"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/dettaglioTextView"
+        app:layout_constraintTop_toBottomOf="@id/dettaglioTextView" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="83dp"
+        android:layout_height="33dp"
+        android:background="@drawable/selector_segui_asta"
+        android:drawablePadding="8dp"
+        android:textColor="@color/text_color_selector"
+        android:textOn="Seguita"
+        android:textOff="Segui Asta"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/dettaglioTextView"/>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tipo_astaTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_product"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_notfound"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/followerTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nome Venditore"
+                android:textColor="@color/customBlue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_product" />
+
+            <TextView
+                android:id="@+id/nomeProdottoTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Nome Prodotto"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/followerTextView"
+                />
+
+            <TextView
+                android:id="@+id/categoriaTextView"
+                android:layout_width="wrap_content"
+                android:minWidth="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/text_categoria_acquirente"
+                android:text="Categoria"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/sottocategoriaTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nomeProdottoTextView"
+                />
+
+            <TextView
+                android:id="@+id/sottocategoriaTextView"
+                android:layout_width="wrap_content"
+                android:minWidth="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/text_categoria_acquirente"
+                android:text="Sottocategoria"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/categoriaTextView"
+                app:layout_constraintTop_toBottomOf="@id/nomeProdottoTextView"
+                />
+
+            <TextView
+                android:id="@+id/descrizioneTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Descrizione"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoriaTextView"
+                />
+
+            <TextView
+                android:id="@+id/testoDescrizioneTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="At enim hic etiam dolore. Dulce amarum, leve asperum, prope longe, stare movere, quadratum rotundum. At certe gravius. Nullus est igitur cuiusquam dies natalis. Paulum, cum regem Persem captum adduceret, eodem flumine invectio?"
+                android:textColor="#7F7F82"
+                android:textAlignment="viewStart"
+                android:textStyle="bold"
+                android:justificationMode="inter_word"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descrizioneTextView"
+                />
+
+            <TextView
+                android:id="@+id/infoasta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Questa asta è chiusa"
+                android:background="@drawable/text_info_rosso"
+                android:textColor="@color/white"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/testoDescrizioneTextView"
+                />
+
+            <TextView
+                android:id="@+id/infoprezzo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Venduto a XX €"
+                android:textColor="@color/customBlue"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoasta"
+                />
+
+            <TextView
+                android:id="@+id/spiegazione"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cos'è un'asta al ribasso?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoprezzo"
+                />
+
+            <TextView
+                android:id="@+id/testoSpiegazioneTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="In un’asta al ribasso, il prezzo dell'articolo cala automaticamente dopo un intervallo di tempo stabilito. Parti da un prezzo iniziale alto e attendi il momento giusto per fare la tua offerta! Ricorda, l'asta finisce non appena viene fatta la prima offerta, quindi sii veloce e strategico. Se il prezzo raggiunge il limite minimo senza offerte, l'asta è considerata fallita. Tenta la fortuna e potresti ottenere un affare incredibile!"
+                android:textColor="#7F7F82"
+                android:textAlignment="viewStart"
+                android:textStyle="bold"
+                android:justificationMode="inter_word"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spiegazione"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

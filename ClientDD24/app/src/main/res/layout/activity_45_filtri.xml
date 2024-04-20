@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/indietroImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_freccia"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+    android:id="@+id/dettaglioTextView"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Dettaglio Asta"
+    android:textColor="#000000"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:layout_marginLeft="10dp"
+    app:layout_constraintStart_toEndOf="@+id/indietroImageView"
+    app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonFiltri"
+        app:layout_constraintTop_toBottomOf="@+id/dettaglioTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Tipologia Section -->
+            <TextView
+                android:id="@+id/tipologiaHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipologia"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxAstaSilenziosa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Asta Silenziosa"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tipologiaHeader" />
+
+            <CheckBox
+                android:id="@+id/checkboxAstaAlRibasso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Asta al Ribasso"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxAstaSilenziosa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Ordina per Section -->
+            <TextView
+                android:id="@+id/ordinaPerHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ordina per"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxAstaAlRibasso"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="32dp" />
+
+            <Spinner
+                android:id="@+id/nazionalitaSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/ordine_array"
+                android:spinnerMode="dropdown"
+                app:layout_constraintTop_toBottomOf="@id/ordinaPerHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Prezzo Section -->
+            <TextView
+                android:id="@+id/prezzoHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prezzo"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/nazionalitaSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="32dp" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rangeSliderPrezzo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:valueFrom="0"
+                android:valueTo="1000"
+                app:values="@array/initial_slider_values"
+                app:layout_constraintTop_toBottomOf="@id/prezzoHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:stepSize="1"
+                app:labelBehavior="gone" />
+
+            <TextView
+                android:id="@+id/leftValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/rangeSliderPrezzo"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:text="0€" />
+
+            <TextView
+                android:id="@+id/rightValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/rangeSliderPrezzo"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                android:text="1000€" />
+
+            <TextView
+                android:id="@+id/dataTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data fine asta"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/rightValue"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="32dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="31/12/2024"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:padding="8dp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true"
+                android:cursorVisible="false"
+                app:layout_constraintTop_toBottomOf="@+id/dataTextView"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- Categoria Section -->
+            <TextView
+                android:id="@+id/categoriaHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoria"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/editTextData"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="32dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Elettronica"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/categoriaHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Moda"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Casa e Giardino"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sport e Tempo Libero"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Bellezza e Salute"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Libri, Film e Musica"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Giochi e Giocattoli"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Arte e Antiquariato"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Auto, Moto e Altri Veicoli"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Gioielli e Orologi"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Immobili"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Collezionismo"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Altro"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxCat14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tutte"
+                android:textColor="@color/black"
+                android:checked="true"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxCat13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/buttonFiltri"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Salva Filtri"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@drawable/button_celeste"
+        android:paddingVertical="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

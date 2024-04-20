@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1093349768862",
+    "project_id": "dietideals24-47093",
+    "storage_bucket": "dietideals24-47093.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093349768862:android:99fe3021a3351f9114c58f",
+        "android_client_info": {
+          "package_name": "com.example.dd24client"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAWLXVJ0QPNuZ4AlDLUn_Bkrjq_BmTbXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/image_logodd24"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/image_logodd24"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DD24Client"
+        tools:targetApi="31">
+        
+        <service
+            android:name=".utils.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <!-- Le tue attività esistenti -->
+        <activity
+            android:name=".views.Activity01Main"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".views.Activity02"/>
+        <activity android:name=".views.Activity03"/>
+        <activity android:name=".views.Activity04"/>
+        <activity android:name=".views.Activity06Login"/>
+        <activity android:name=".views.Activity07Signup"/>
+        <activity android:name=".views.Activity08Signup"/>
+        <activity android:name=".views.Activity09Signup"/>
+        <activity android:name=".views.Activity10Signup"/>
+        <activity android:name=".views.Activity05Welcome"/>
+        <activity android:name=".views.Activity14Terms"/>
+        <activity android:name=".views.Activity11Forgot"/>
+        <activity android:name=".views.Activity12Forgot"/>
+        <activity android:name=".views.Activity13Forgot"/>
+        <activity android:name=".views.Activity15HomeAcquirente"/>
+        <activity android:name=".views.Activity16Categorie"/>
+        <activity android:name=".views.Activity17AsteAcquirente"/>
+        <activity android:name=".views.Activity18AsteAcquirente"/>
+        <activity android:name=".views.Activity19DettaglioAstaRibassoAperta"/>
+        <activity android:name=".views.Activity21DettaglioAstaSilenziosa"/>
+        <activity android:name=".views.Activity23DettaglioAstaSilenziosaChiusa"/>
+        <activity android:name=".views.Activity24DettaglioAstaRibassoChiusa"/>
+        <activity android:name=".views.Activity25ProfiloVenditoreInformazioni"/>
+        <activity android:name=".views.Activity26ProfiloVenditoreNegozio"/>
+        <activity android:name=".views.Activity31Acquisti"/>
+        <activity android:name=".views.Activity32Negozio"/>
+        <activity android:name=".views.Activity33Seguite"/>
+        <activity android:name=".views.Activity27ProfiloActivity"/>
+        <activity android:name=".views.Activity28ModificaPassword"/>
+        <activity android:name=".views.Activity29ModificaProfilo"/>
+        <activity android:name=".views.Activity30ModificaProfilo"/>
+        <activity android:name=".views.Activity34HomeVenditore"/>
+        <activity android:name=".views.Activity35AsteRibassoVenditore"/>
+        <activity android:name=".views.Activity36AsteSilenziosaVenditore"/>
+        <activity android:name=".views.Activity37CreaAR"/>
+        <activity android:name=".views.Activity38CreaAR"/>
+        <activity android:name=".views.Activity39CreaAS"/>
+        <activity android:name=".views.Activity40DettaglioARAperta"/>
+        <activity android:name=".views.Activity41DettaglioASAperta"/>
+        <activity android:name=".views.Activity42DettaglioARChiusa"/>
+        <activity android:name=".views.Activity43DettaglioASChiusa"/>
+        <activity android:name=".views.Activity44Search"/>
+        <activity android:name=".views.Activity45Filtri"/>
+        <activity android:name=".views.Activity46Vendi"/>
+        <activity android:name=".views.Activity47VendiAR"/>
+        <activity android:name=".views.Activity48VendiAS"/>
+
+    </application>
+
+
+</manifest>

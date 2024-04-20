@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageButtonIndietro" type="id" />
+    <item name="imageViewOppureTesto" type="id" />
+    <item name="layoutSocialContainer" type="id" />
+    <item name="aggiungiSocialTextView" type="id" />
+    <item name="aggiungiSocialImageView" type="id" />
+    <item name="cbTermsAndConditions" type="id" />
+</resources>

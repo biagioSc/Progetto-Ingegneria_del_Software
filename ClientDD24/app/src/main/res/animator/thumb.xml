@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Colore per lo stato ON -->
+    <item android:color="@color/switchThumbOn" android:state_checked="true"/>
+    <!-- Colore per lo stato OFF -->
+    <item android:color="@color/switchThumbOff" android:state_checked="false"/>
+</selector>

@@ -1,0 +1,30 @@
+buildscript {
+    ext.kotlin_version = '1.8.0' // Verifica la compatibilità con la versione di Kotlin
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.3.1'
+        // Usa la versione raccomandata per Android Studio Iguana
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.4.1' // Verifica la compatibilità con la versione più recente
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.3.1' apply false // Aggiorna se necessario
+    id 'com.android.library' version '8.3.1' apply false // Aggiorna se necessario
+    id 'com.google.gms.google-services' version '4.4.1' apply false // Verifica e aggiorna se necessario
+    id "org.sonarqube" version "4.4.1.3373"
+
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "INGSW2324"
+        property "sonar.projectName", "INGSW2324"
+        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.login", "sqp_fa6d7076eb71d33f3207d72dadbb515fcccf0eba"
+    }
+}

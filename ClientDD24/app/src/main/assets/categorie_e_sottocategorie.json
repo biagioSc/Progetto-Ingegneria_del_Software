@@ -1,0 +1,92 @@
+{
+  "Categoria": [
+    "Sottocategoria"
+  ],
+  "Elettronica": [
+    "Smartphone e Accessori",
+    "Computer e Tablet",
+    "Audio e Hi-Fi",
+    "Fotografia e Video",
+    "Giochi e Console"
+  ],
+  "Moda": [
+    "Abbigliamento Uomo",
+    "Abbigliamento Donna",
+    "Scarpe",
+    "Accessori",
+    "Gioielli"
+  ],
+  "Casa e Giardino": [
+    "Arredamento",
+    "Elettrodomestici",
+    "Giardinaggio",
+    "Illuminazione",
+    "Utensili da Cucina"
+  ],
+  "Sport e Tempo Libero": [
+    "Fitness e Palestra",
+    "Camping e Outdoor",
+    "Ciclismo",
+    "Sport Acquatici",
+    "Sport Invernali"
+  ],
+  "Bellezza e Salute": [
+    "Cura della Persona",
+    "Make-up e Cosmetici",
+    "Salute e Benessere",
+    "Profumi e Fragranze",
+    "Cura dei Capelli"
+  ],
+  "Libri, Film e Musica": [
+    "Libri",
+    "DVD e Blu-ray",
+    "CD e Vinili",
+    "Strumenti Musicali",
+    "Riviste e Fumetti"
+  ],
+  "Giochi e Giocattoli": [
+    "Giochi da tavolo",
+    "Puzzle",
+    "Giochi educativi",
+    "Giochi di ruolo",
+    "Modellismo"
+  ],
+  "Arte e Antiquariato": [
+    "Quadri",
+    "Sculture",
+    "Mobili antichi",
+    "Oggetti d'arte",
+    "Monete e francobolli"
+  ],
+  "Auto, Moto e Altri Veicoli": [
+    "Automobili classiche",
+    "Moto",
+    "Barche",
+    "Camper e Caravan",
+    "Veicoli commerciali"
+  ],
+  "Gioielli e Orologi": [
+    "Gioielli vintage",
+    "Orologi da polso",
+    "Diamanti",
+    "Perle",
+    "Oro e argento"
+  ],
+  "Immobili": [
+    "Case",
+    "Appartamenti",
+    "Terreni",
+    "Locali commerciali",
+    "Immobili industriali"
+  ],
+  "Collezionismo": [
+    "Carte collezionabili",
+    "Action figure",
+    "Modellini",
+    "Vinili",
+    "Libri rari"
+  ],
+  "Altro": [
+    "Altri Prodotti"
+  ]
+}

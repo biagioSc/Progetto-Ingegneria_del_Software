@@ -1,0 +1,26 @@
+<resources>
+    <array name="initial_slider_values">
+        <item>0</item>
+        <item>1000</item>
+    </array>
+
+    <array name="ordine_array">
+        <item>Prezzo dal più caro</item>
+        <item>Prezzo dal meno caro</item>
+        <item>Nome A-Z</item>
+        <item>Nome Z-A</item>
+    </array>
+
+    <array name="tipoasta">
+        <item>Tipologia</item>
+        <item>Al Ribasso</item>
+        <item>Silenziosa</item>
+    </array>
+
+    <array name="categoria_array">
+        <item>Arredamento</item>
+        <item>Elettrodomestici</item>
+        <item>Giocattoli</item>
+        <item>Altro</item>
+    </array>
+</resources>

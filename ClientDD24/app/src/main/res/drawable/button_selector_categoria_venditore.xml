@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Quando l'elemento è premuto -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#ED893E"/> <!-- Colore di sfondo quando premuto -->
+            <corners android:radius="10dp"/> <!-- Raggio degli angoli arrotondati -->
+        </shape>
+    </item>
+
+    <!-- Quando l'elemento è selezionato -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#ED893E"/> <!-- Colore di sfondo quando selezionato -->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+
+    <!-- Stato di default -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/> <!-- Colore di sfondo di default -->
+
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - db-springboot-network
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/dietideals-db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: BiagioErasmo2024
+      # Includi altre variabili d'ambiente necessarie qui
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: dietideals-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: BiagioErasmo2024
+    ports:
+      - "5432:5432"
+    networks:
+      - db-springboot-network
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+  db-springboot-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

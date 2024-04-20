@@ -1,0 +1,3 @@
+- token jwt per api
+- modalità ospite
+- email case sensitive

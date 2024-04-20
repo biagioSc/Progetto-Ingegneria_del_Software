@@ -1,0 +1,61 @@
+Cliccato 'registrati' in 05welcome
+Cliccato 'continua' in 07signup
+Cliccato 'continua' in 08signup
+Cliccato 'accetta terms' in 09signup
+Cliccato 'registra' in 09signup
+Cliccato 'accedi' in 06login
+Cliccato 'segui/seguita' in 19dettaglio
+Cliccato 'acquista' in 19dettaglio
+Cliccato 'indietro' in 24dettaglio
+Cliccato 'vedi tutte' silenziose in 15home
+Cliccato 'Tutti' in 18aste
+Cliccato 'Casa e Giardino' in 18aste
+Cliccato 'CardSilenziosaApertaAcquirente' in 18aste
+Cliccato 'aggiunta rapida' in 21dettaglio
+Cliccato 'piu/meno' in 21dettaglio
+Cliccato 'piu/meno' in 21dettaglio
+Cliccato 'piu/meno' in 21dettaglio
+Cliccato 'offri' in 21dettaglio
+Cliccato 'segui/seguita' in 21dettaglio
+Cliccato 'indietro' in 21dettaglio
+Cliccato 'Casa e Giardino' in 18aste
+Cliccato 'CardSilenziosaApertaAcquirente' in 18aste
+Cliccato 'aste ribasso' in 18aste
+Cliccato 'Casa e Giardino' in 17aste
+Cliccato 'Sport e Tempo Libero' in 17aste
+Cliccato 'CardRibassoApertaAcquirente' in 17aste
+Cliccato per fare una ricerca in 17aste
+Cliccato 'CardListenerRibassoApertaAcquirente' in 44search
+Cliccato 'setupCardListenerSilenziosaApertaAcquirente' in 44search
+Cliccato 'setupCardListenerSilenziosaApertaAcquirente' in 44search
+Cliccato 'home' in bottom navigation in 44search
+Cliccato 'vedi tutte' categorie in 15home
+Cliccato 'Collezionismo' in 17aste
+Cliccato 'CardRibassoApertaAcquirente' in 17aste
+Cliccato 'aste silenziosa' in 17aste
+Cliccato 'Collezionismo' in 18aste
+Cliccato 'CardSilenziosaApertaAcquirente' in 18aste
+Cliccato 'CardSilenziosaApertaAcquirente' in 18aste
+Cliccato 'profilo' in bottom navigation in 18aste
+Cliccato 'acquisti' in 27profilo
+Cliccato 'CardSilenziosaApertaAcquirente' in 31acquisti
+Cliccato 'CardRibassoChiusaAcquirente' in 31acquisti
+Cliccato 'indietro' in 31acquisti
+Cliccato 'negozio' in 27profilo
+Cliccato 'indietro' in 32negozio
+Cliccato 'seguite' in 27profilo
+Cliccato 'CardRibassoChiusaAcquirente' in 33seguite
+Cliccato 'CardSilenziosaApertaAcquirente' in 33seguite
+Cliccato 'indietro' in 33seguite
+Cliccato 'home' in bottom navigation in 27profilo
+Cliccato 'vendi' in 15home
+Cliccato 'creaas' in bottom navigation in 34home
+Cliccato 'continua' in 39crea
+Cliccato 'setupCardListenerSilenziosaApertaVenditore' in 34home
+Cliccato 'indietro' in 41dettaglio
+Cliccato 'setupCardListenerSilenziosaApertaVenditore' in 34home
+Cliccato 'vedi tutte' in bottom navigation in 34home
+Cliccato 'profilo' in bottom navigation in 35aste
+Cliccato 'negozio' in 27profilo
+Cliccato 'CardSilenziosaApertaVenditore' in 32negozio
+Cliccato 'indietro' in 32negozio

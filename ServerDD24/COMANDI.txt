@@ -1,0 +1,12 @@
+pscp -r -i "C:\Users\biagi\Downloads\WindowsKey.ppk" "C:\Users\biagi\Desktop\INGSW\ServerDD24" ubuntu@51.21.10.214:/home/ubuntu/ingswServer
+
+
+docker stop nome-container
+docker rm nome-container
+docker build -t springboot-container .
+docker run -p 8080:8080 --name springboot-container --network db-springboot-network springboot-app
+docker network connect db-springboot-network springboot-container
+
+docker run -d --name springboot-app --network db-springboot-network  -e DATABASE_URL=jdbc:postgresql://dietideals-db:5432/postgres -e DATABASE_USERAME=postgres -e DATABASE_PASSWORD=BiagioErasmo2024 -p 8080:8080 springboot-container:latest
+
+

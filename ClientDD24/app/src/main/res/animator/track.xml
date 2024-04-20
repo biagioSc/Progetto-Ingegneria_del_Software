@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Colore per lo stato ON -->
+    <item android:color="@color/switchTrackOn" android:state_checked="true"/>
+    <!-- Colore per lo stato OFF -->
+    <item android:color="@color/switchTrackOff" android:state_checked="false"/>
+</selector>

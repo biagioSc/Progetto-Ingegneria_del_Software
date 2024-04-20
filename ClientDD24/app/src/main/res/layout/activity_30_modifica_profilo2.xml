@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/Slder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_sliderbis_2"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/indietroImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/icon_freccia"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toBottomOf="@id/Slder"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/modificaProfiloTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Modifica Profilo"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/indietroImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/modificaProfiloTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/fotoImageView"
+                android:layout_width="250dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/image_modificapassword2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- ScrollView inizia qui -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scrollViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+
+                app:layout_constraintTop_toBottomOf="@id/fotoImageView">
+
+
+                <TextView
+                    android:id="@+id/tvWebsiteLinkLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Link sito web"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Autofill sito"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:background="@null"
+                    android:paddingBottom="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvWebsiteLinkLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/emailToggle"
+                    app:layout_constraintHorizontal_chainStyle="packed" />
+
+                <ImageButton
+                    android:id="@+id/emailToggle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="false"
+                    android:contentDescription="@string/toggle_password_visibility"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:padding="15dp"
+                    android:src="@drawable/icon_basiccheck"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="@id/editTextEmail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/editTextEmail" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#CCCCCC"
+                    app:layout_constraintTop_toBottomOf="@id/emailToggle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvSocialLink1Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Link social 1"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/emailToggle" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextSocial1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Autofill link 1"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:background="@null"
+                    android:paddingBottom="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvSocialLink1Label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/emailToggle1"
+                    app:layout_constraintHorizontal_chainStyle="packed" />
+
+                <ImageButton
+                    android:id="@+id/emailToggle1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="false"
+                    android:contentDescription="@string/toggle_password_visibility"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:padding="15dp"
+                    android:src="@drawable/icon_basiccheck"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="@id/editTextSocial1"
+                    app:layout_constraintBottom_toBottomOf="@id/editTextSocial1"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#CCCCCC"
+                    app:layout_constraintTop_toBottomOf="@id/emailToggle1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvSocialLink2Label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Link social 2"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/emailToggle1" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextSocial2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Autofill link 2"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:background="@null"
+                    android:paddingBottom="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvSocialLink2Label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/emailToggle2"
+                    app:layout_constraintHorizontal_chainStyle="packed"/>
+
+                <ImageButton
+                    android:id="@+id/emailToggle2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="false"
+                    android:contentDescription="@string/toggle_password_visibility"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:padding="15dp"
+                    android:src="@drawable/icon_basiccheck"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="@id/editTextSocial2"
+                    app:layout_constraintBottom_toBottomOf="@id/editTextSocial2"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#CCCCCC"
+                    app:layout_constraintTop_toBottomOf="@id/emailToggle2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/aggiungiSocialTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aggiungi Social"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:drawableEnd="@drawable/icon_add"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/scrollViewContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="25dp" />
+
+            <TextView
+                android:id="@+id/textInfoError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/aggiungiSocialTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/salvaModificheButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Salva Modifiche"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_celeste"
+                android:padding="15dp"
+                android:elevation="2dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInfoError"
+                android:layout_marginBottom="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

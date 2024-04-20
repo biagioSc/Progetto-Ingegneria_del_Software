@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="customBlue">#54ACB4</color> <!-- Nome modificato per riflettere il colore -->
+    <color name="lightBlue">#75C4CC</color> <!-- Nome modificato per riflettere il colore -->
+    <color name="darkOrange">#DB591B</color> <!-- Nome modificato per riflettere il colore -->
+    <color name="lightOrange">#ED893E</color> <!-- Nome modificato per riflettere il colore -->
+    <color name="teal">#167F71</color> <!-- Nome modificato per riflettere il colore -->
+    <color name="brightOrange">#FF8A06</color> <!-- Nome modificato per riflettere il colore -->
+    <color name="red">#FF5959</color> <!-- Nome modificato per riflettere il colore -->
+    <color name="grey">#7F7F82</color> <!-- Nome modificato per riflettere il colore -->
+    <color name="lightCeleste">#49AFF9</color> <!-- Nome modificato per riflettere il colore -->
+    <color name="lightGrey">#BFC0BE</color> <!-- Nome modificato per riflettere il colore -->
+    <color name="switchThumbOn">#54ACB4</color> <!-- Ad esempio, giallo per ON -->
+    <color name="switchThumbOff">#D6D6D6</color> <!-- Grigio per OFF -->
+    <color name="switchTrackOn">#75C4CC</color> <!-- Giallo scuro per ON -->
+    <color name="switchTrackOff">#9E9E9E</color> <!-- Grigio scuro per OFF -->
+</resources>

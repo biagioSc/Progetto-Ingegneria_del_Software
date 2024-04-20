@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DD24Client" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/customBlue</item>
+        <item name="colorPrimaryVariant">@color/lightBlue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Colori secondari -->
+        <item name="colorSecondary">@color/darkOrange</item>
+        <item name="colorSecondaryVariant">@color/lightOrange</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Colori di errore -->
+        <item name="colorError">@color/red</item>
+        <!-- Altri colori dell'interfaccia utente -->
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="Theme.DD24Client" parent="Base.Theme.DD24Client" />
+</resources>

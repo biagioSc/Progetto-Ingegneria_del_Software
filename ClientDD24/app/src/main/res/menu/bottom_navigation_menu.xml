@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/icong_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_cerca"
+        android:icon="@drawable/icong_cerca"
+        android:title="Cerca" />
+    <item
+        android:id="@+id/navigation_vendi"
+        android:icon="@drawable/icong_vendi"
+        android:title="Vendi" />
+    <item
+        android:id="@+id/navigation_aste"
+        android:icon="@drawable/icong_aste"
+        android:title="Aste" />
+    <item
+        android:id="@+id/navigation_profilo"
+        android:icon="@drawable/icong_profilo"
+        android:title="Profilo" />
+</menu>

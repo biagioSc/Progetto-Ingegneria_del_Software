@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">DietiDeals24</string>
+    <string name="email_hint">Inserisci email</string>
+    <string name="password_hint">Inserisci la password</string>
+    <string name="login_button">Login</string>
+
+    <!-- Sostituire con valori reali -->
+    <string name="facebook_app_id">123456789</string>
+    <string name="fb_login_protocol_scheme">fb123456789</string>
+    <string name="default_web_client_id">385271545232-qmu8n5gpe3iu0t33gkm3uk511o1k8kho.apps.googleusercontent.com</string>
+    <string name="facebook_login">loginFaceebok</string>
+    <string name="apple_login">appleLogin</string>
+    <string name="google_login">googleLogin</string>
+    <string name="github_login">githublogin</string>
+    <string name="oppure">( Oppure )</string>
+    <string name="registrati">Registrati</string>
+    <string name="accedi">Accedi</string>
+    <string name="inserisci_email_e_password">Inserisci Email e Password</string>
+    <string name="email">Email</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="toggle_password_visibility">Toggle Password Visibility</string>
+    <string name="password">Password</string>
+    <string name="password_dimenticata">Password dimenticata?</string>
+    <string name="ricordami">Ricordami</string>
+    <string name="passwordInsivible">••••••••</string>
+    <string name="logo">Logo</string>
+    <string name="nome">Nome</string>
+    <string name="mario">Mario</string>
+
+    <!-- Altri elementi ... -->
+    <string-array name="nationality_array">
+        <item>Italia</item>
+        <item>Francia</item>
+        <item>Germania</item>
+        <!-- Altri paesi ... -->
+    </string-array>
+
+    <string-array name="city_array">
+        <item>Roma</item>
+        <item>Milano</item>
+        <item>Napoli</item>
+        <!-- Altre città ... -->
+    </string-array>
+
+
+</resources>
